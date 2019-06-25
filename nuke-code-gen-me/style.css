@@ -1,4 +1,3 @@
-/* background image from https://nationalinterest.org/sites/default/files/styles/desktop__1486_x_614/public/main_images/atomic_bomb.jpg?itok=cUVH4gSg */
 *{
     margin: 0;
     padding: 0;
@@ -21,6 +20,7 @@ body{
     padding: 2em 5em 1em;
     background-color: white;
     display:flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -46,21 +46,80 @@ body{
     margin: 1em 0;
     font-size: 1.5em
 }
+/* lunch */
+#booom{
+    position: absolute;
+    bottom: 0;
+    transform: translate(0,40%);
+    text-decoration: none;
+    background-color: yellow;
+    background-image: url(radiation-solid.svg);
+    background-position: center;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    width: 4em;
+    height: 4em;
+    border: .15em solid black;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: .5s;
+}#booom:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.685);
+}
 /* list other */
 .list-co{
     padding: .5em 5em;
     margin: .5em 0 ;
+}.list-co:nth-child(1){
+    margin-top: 2em;
 }
 .list-co a{
     padding: 0.5em;
     display: block;
     text-decoration: none;
+    color: black;
     font-size: 1em;
 }
-
+.ano_link{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.418);
+    padding: .3em;
+}.ano_link a{
+    transition: .3s;
+    color: white;
+}.ano_link a:hover{
+    color: blue;
+}
+/* ===========================nuke_red.html============================== */
+#red_form{
+    display:flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#red_label{
+    font-size: 1.2em
+}
+#red_code{
+    margin: .5em 0;
+    padding: .2em .5em;
+    font-size: 1.5em;
+    text-align: center;
+}
+.red_button{
+    display: block;
+    margin-bottom: 2em;
+}.red_button:hover{
+    cursor: pointer;
+}
+.red_ano_link{
+    margin-top: 2em;
+}
+/* ===========================animation================================== */
 @keyframes muncul {
     0%{
-        transform: translate(0em,-1em)
+        transform: translate(0em,-1em);
     }
     100%{
         opacity: 1;

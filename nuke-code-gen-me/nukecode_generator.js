@@ -3,11 +3,11 @@
         let historyCode = [ ['No history'],['No history'],['No history']]
         let historyCodePlace = document.querySelectorAll('.list-co a');
         // klik
-    document.getElementById("click").addEventListener("click", function(event){
+    document.getElementById("click").addEventListener("click", (event)=>{
         event.preventDefault()
         let code = []
         for (let i = 0; i < 6; i++) {
-            code.push(Math.ceil((Math.random())*10)-1)
+            code.push(Math.floor((Math.random())*10))
             if(code.length >= 6){
                 console.log(code.join(''));
                 if (code.length !== 6) {
@@ -19,9 +19,13 @@
             }
         }
         document.getElementById("code").innerHTML = code.join('')
-
+        document.getElementById('booom').setAttribute('href','https://1cak.com/'+code.join(''))
         historyCodePlace.forEach((e,i) => {
             e.innerHTML = historyCode[i].join('')
+            e.setAttribute('href','https://1cak.com/'+historyCode[i].join(''))
         });
       });
+      document.querySelector('.red_button').addEventListener('click',(event)=>{
+          event.setAttribute('href','https://1cak.com/'+document.getElementById('red_code').value)
+      })
 })()
