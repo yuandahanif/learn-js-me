@@ -110,8 +110,6 @@ body{
 .red_button{
     display: block;
     margin-bottom: 2em;
-}.red_button:hover{
-    cursor: pointer;
 }
 .red_ano_link{
     margin-top: 2em;

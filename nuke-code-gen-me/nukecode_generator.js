@@ -26,6 +26,6 @@
         });
       });
       document.querySelector('.red_button').addEventListener('click',(event)=>{
-          event.setAttribute('href','https://1cak.com/'+document.getElementById('red_code').value)
+          window.open('https://1cak.com/'+document.getElementById('red_code').value,'blank')
       })
 })()
